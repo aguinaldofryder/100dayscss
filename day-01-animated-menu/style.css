@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: #519e77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu span {
+    display: block;
+    background-color: #fff;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    width: 100%;
+    position: absolute;
+}
+
+#line-one { 
+    top: 0px;
+    transform: rotate(0);
+    animation: line-one-reverse 800ms;
+}
+
+#line-two {
+    top: 16px;
+    animation: line-two-reverse 800ms;
+}
+
+#line-three {
+    top: 32px;
+    animation: line-three-reverse 800ms;
+}
+
+.active #line-one { 
+    top: 16px;
+    transform: rotate(45deg);
+    animation: line-one 800ms;
+}
+.active #line-two { 
+    opacity: 0;
+    animation: line-two 800ms;
+}
+
+.active #line-three { 
+    top: 16px;
+    transform: rotate(135deg);
+    animation: line-three 800ms;
+}
+
+@keyframes line-one {
+    0% {
+        transform: rotate(0);
+        top: 0;
+    }
+    60% {
+        transform: rotate(0);
+        top: 16px;
+    }
+    100% { 
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes line-one-reverse {
+    0% {
+        top: 16px;        
+        transform: rotate(45deg);
+    }
+    60% {
+        top: 16px;        
+        transform: rotate(0);
+    }
+    100% { 
+        top: 0;        
+        transform: rotate(0);
+    }
+}
+
+@keyframes line-two { 
+    0% { 
+        opacity: 1;
+        width: 100%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        opacity: 0; 
+        width: 50%;
+    }
+}
+@keyframes line-two-reverse { 
+    0% { 
+        opacity: 0; 
+        width: 50%;
+    }
+    50% {
+        opacity: 0; 
+        width: 50%;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes line-three {
+    0% {
+        transform: rotate(0);
+        top: 32px;
+    }
+    60% {
+        transform: rotate(0);
+        top: 16px;
+    }
+    100% { 
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes line-three-reverse {
+    0% {
+        top: 16px;
+        transform: rotate(135deg);
+    }
+    60% {
+        top: 16px;
+        transform: rotate(0);
+    }
+    100% { 
+        transform: rotate(0);
+        top: 32px;
+    }
+}
