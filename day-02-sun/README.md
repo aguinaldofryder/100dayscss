@@ -1,4 +1,4 @@
-### Menu animado
+### Sol
 
 Neste exercício uma simples animação, mas com muitos aprendizados. 
 
